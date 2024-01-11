@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "play_lists",
+  "info": {
+    "singularName": "play-list",
+    "pluralName": "play-lists",
+    "displayName": "Courses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "is_popular": {
+      "type": "boolean"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Duration": {
+      "type": "float"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "play_lists"
+    },
+    "link": {
+      "type": "string"
+    },
+    "is_pay": {
+      "type": "boolean"
+    },
+    "Price": {
+      "type": "float"
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video.video"
+    }
+  }
+}
