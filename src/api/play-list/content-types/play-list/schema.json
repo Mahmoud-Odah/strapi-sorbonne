@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "is_popular": {
       "type": "boolean"
     },
@@ -54,6 +51,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::video.video"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "more": {
+      "type": "boolean"
     }
   }
 }

@@ -19,7 +19,7 @@ function flattenArray(obj) {
         const mimeType = attrs[key]?.mime;
         if (
           attrs[key]?.url &&
-          (mimeType?.includes("image") || mimeType?.includes("pdf"))
+          (mimeType?.includes("image") || mimeType?.includes("pdf") || mimeType?.includes("video"))
         ) {
           attrs[key] = attrs[key]?.url;
         }

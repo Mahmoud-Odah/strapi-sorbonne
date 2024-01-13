@@ -824,7 +824,6 @@ export interface ApiPlayListPlayList extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
     is_popular: Attribute.Boolean;
     image: Attribute.Media;
     Duration: Attribute.Float;
@@ -841,6 +840,8 @@ export interface ApiPlayListPlayList extends Schema.CollectionType {
       'oneToMany',
       'api::video.video'
     >;
+    description: Attribute.RichText;
+    more: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
