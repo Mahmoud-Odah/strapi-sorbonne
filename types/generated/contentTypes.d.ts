@@ -842,6 +842,7 @@ export interface ApiPlayListPlayList extends Schema.CollectionType {
     >;
     description: Attribute.RichText;
     more: Attribute.Boolean;
+    files: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -876,6 +877,7 @@ export interface ApiVideoVideo extends Schema.CollectionType {
     Duration: Attribute.String;
     video: Attribute.Media;
     link: Attribute.String;
+    files: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
